@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW1-AneesSaheba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #8e44ad); /* pink → purple gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #8e44ad; /* purple heading */
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #ff6ec7; /* neon pink focus */
+            outline: none;
+            box-shadow: 0 0 6px #ff6ec7;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff6ec7, #8e44ad);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-top: 10px;
+        }
+
+        .checkbox-container input {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Step 2: Heading for blog topic -->
+        <h1>My Blog Topic</h1>
+
+        <!-- Step 3: Blog form -->
+        <form>
+            <!-- a. Blog title input -->
+            <input type="text" name="blogTitle" placeholder="Enter the title of your blog" required autofocus>
+
+            <!-- b. Author name input -->
+            <input type="text" name="authorName" placeholder="Enter your name" required>
+
+            <!-- c. Email input -->
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <!-- d. Blog content textarea -->
+            <textarea name="content" placeholder="Write your content here..." required></textarea>
+
+            <!-- e. Dropdown for category -->
+            <select name="category" id="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="technology">Technology</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="travel">Travel</option>
+                <option value="education">Education</option>
+            </select>
+
+            <!-- f. Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" >
+                <label for="terms">I agree to the terms and conditions.</label>
+            </div>
+
+            <!-- g. Submit button -->
+            <button type="submit">Publish Blog</button>
+        </form>
+    </div>
+
+    <!-- Step 4: Script link -->
+    <script src="HW1-AneesSaheba.js"></script>
+</body>
+</html>
